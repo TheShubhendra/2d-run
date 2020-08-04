@@ -46,9 +46,12 @@ createCanvas(windowWidth,windowHeight/2)
          storeItem("highScore",highScore);
          score = 0;
 
-         textSize(50);
-          fill("#f16767")
-         text("Game Over",width/5,height/2);
+          textSize(50);
+          fill("#f16767");
+
+          textAlign(CENTER);
+          text("Game Over",width/2,100);
+         
         /* btn = createButton("Restart");
          btn.position((width/2)-20,(height/2)+40);*/
          noLoop();
@@ -62,11 +65,13 @@ createCanvas(windowWidth,windowHeight/2)
         obs.splice(i,1);
        }
       }
+      textAlign(LEFT);
      textSize(15);
      fill("#b6f293");
      text("Score: "+str(score),50,50);
      fill("#a595ef");
-     text("High Score: "+str(highScore),200,50);
+     textAlign(RIGHT);
+     text("High Score: "+str(highScore),width-50,50);
      
      if(touches.length>0){
        ball.jump();
