@@ -44,7 +44,7 @@ class Obstacles {
     this.xPos-=this.xSpeed;
   }
   hit(ball){
-     if(this.xPos<=25 && ball.yPos>=this.yPos){
+     if(this.xPos<=ball.xPos+8 && ball.yPos>=this.yPos){
       
       return true;
     }else{
